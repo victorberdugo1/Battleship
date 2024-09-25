@@ -1,0 +1,5 @@
+Portaviones, 5
+Destructor, 4
+Corbeta, 2
+Fragata, 3
+Submarino, 3
