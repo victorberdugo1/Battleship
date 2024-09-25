@@ -1,4 +1,4 @@
-# README for Battleship Game
+# Battleship Game
 
 ## Introduction
 
@@ -13,13 +13,11 @@ This project aims to develop an application that encapsulates basic concepts lik
 - Structures
 - Files
 
-Additionally, new functionalities with a visual character are introduced.
-
 ## Statement
 
 The program simulates the traditional game **Battleship**. It will load information from the `barcos.txt` file, which should follow this format:
 
-NAME OF THE SHIP, SIZE
+```NAME OF THE SHIP, SIZE```
 
 Where:
 - **NAME OF THE SHIP**: the name assigned to the ship (String).
@@ -32,17 +30,18 @@ Corvette, 2
 Frigate, 3
 Submarine, 3
 
-In this example, five different types of ships are defined. The program should specify the number of ships in the game and ensure that the `barcos.txt` file contains exactly this number.
+In this example, five different types of ships are defined. The program should specify the number of ships in the game and ensure that the `barq.txt` file contains exactly this number.
 
 For reading this file, it is recommended to define a structure with the same fields as those defined in the file and declare a vector of this structured type (`struct barcos[maxBarcos]`) to gather information about all the ships. Remember that each data is separated by a comma and space, and there is a newline at the end of each line.
 
 Additionally, there is initially a `estadisticas.txt` file with the following format:
+```
 RECORD: 129
 PLAYER 1: 0
 PLAYER 2: 0
 DRAWS: 0
 LONGEST GAME: 0
-
+```
 The file collects the game's statistics:
 - The **record** keeps track of the minimum number of shots required for a player to win a game.
 - **PLAYER 1** counts how many times Player 1 has won.
@@ -53,12 +52,12 @@ The file collects the game's statistics:
 ## Main Menu
 
 The program will display the following main menu:
-
+```
 [1] - Start new game
 [2] - Modify fleet
 [3] - View statistics
 [0] - Exit
-
+```
 ### Start New Game
 
 Each player will have an 8x8 matrix where they will place their ships. Initially, this matrix will be initialized to 0 (water). Each position occupied by a ship will be identified with a 1.
@@ -73,9 +72,9 @@ The program will check that the ships are correctly placed. To do this, it is re
 
 The function will return 0 if the coordinates of the ship are correct, and 1 if they are not.
 
-If a ship is introduced incorrectly, the following message will be displayed:
+If a ship is introduced incorrectly, an error message will be displayed.
 
-At this point, the player can see the positions of their ships on the board. Note that there is a ship of size 5 located in the matrix; it is shown in red, and the rest are in blue.
+At this point, the player can see the positions of their ships on the board.
 
 ### Start Game
 
@@ -95,8 +94,12 @@ The program will return to the initial menu.
 
 From this option, the user can modify the ships of the game. Before this, they will need to identify themselves with a password of string type (e.g., "12345"). The program will display the information of each ship and ask the user if they want to change it.
 
-The changes will be saved in the `barcos.txt` file, which must maintain the previously specified format.
+The changes will be saved in the `barq.txt` file, which must maintain the previously specified format.
 
 ### Show Statistics
 
 With this option, the `estadisticas.txt` file will be read, and the data will be displayed on the screen.
+
+### Exit
+
+With this option, the application ends with a message.
