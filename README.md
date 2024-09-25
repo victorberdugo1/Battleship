@@ -15,7 +15,7 @@ This project aims to develop an application that encapsulates basic concepts lik
 
 ## Statement
 
-The program simulates the traditional game **Battleship**. It will load information from the `barcos.txt` file, which should follow this format:
+The program simulates the traditional game **Battleship**. It will load information from the `barq.txt` file, which should follow this format:
 
 ```NAME OF THE SHIP, SIZE```
 
@@ -24,11 +24,13 @@ Where:
 - **SIZE**: the number of squares occupied by the ship on the board (Integer).
 
 **Example**:
-Aircraft Carrier, 5
-Destroyer, 4
-Corvette, 2
-Frigate, 3
-Submarine, 3
+```
+Portaviones, 5
+Destructor, 4
+Corbeta, 2
+Fragata, 3
+Submarino, 3
+```
 
 In this example, five different types of ships are defined. The program should specify the number of ships in the game and ensure that the `barq.txt` file contains exactly this number.
 
@@ -43,11 +45,11 @@ EMPATES: 0
 PARTIDA MAS LARGA: 0
 ```
 The file collects the game's statistics:
-- The **record** keeps track of the minimum number of shots required for a player to win a game.
-- **PLAYER 1** counts how many times Player 1 has won.
-- **PLAYER 2** counts how many times Player 2 has won.
-- **DRAWS** counts how many times there has been a draw (both players have used the same number of shots to eliminate the rival fleet).
-- **LONGEST GAME** keeps track of the total shots taken by both players that took the longest to destroy the rival fleet.
+- The **RECORD** keeps track of the minimum number of shots required for a player to win a game.
+- **JUGADOR 1** counts how many times Player 1 has won.
+- **JUGADOR 2** counts how many times Player 2 has won.
+- **EMPATES** counts how many times there has been a draw (both players have used the same number of shots to eliminate the rival fleet).
+- **PARTIDA MAS LARGA** keeps track of the total shots taken by both players that took the longest to destroy the rival fleet.
 
 ## Main Menu
 
