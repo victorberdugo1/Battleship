@@ -36,11 +36,11 @@ For reading this file, it is recommended to define a structure with the same fie
 
 Additionally, there is initially a `estadisticas.txt` file with the following format:
 ```
-RECORD: 129
-PLAYER 1: 0
-PLAYER 2: 0
-DRAWS: 0
-LONGEST GAME: 0
+RECORD: 4242
+JUGADOR 1: 0
+JUGADOR 2: 0
+EMPATES: 0
+PARTIDA MAS LARGA: 0
 ```
 The file collects the game's statistics:
 - The **record** keeps track of the minimum number of shots required for a player to win a game.
