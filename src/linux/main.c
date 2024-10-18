@@ -68,6 +68,32 @@ int main()
 	return (0);
 }
 
+int Barco_Destruido(int Mar[8][8], int coord[2], char orientacion, int tam)
+{
+    if (orientacion == 'H' || orientacion == 'h')
+	{
+        for (int i = 0; i < tam; i++)
+		{
+            if (Mar[coord[0]][coord[1] + i] != 0)
+			{
+                return 0;
+
+			}
+        }
+    }
+	else if (orientacion == 'V' || orientacion == 'v')
+	{
+        for (int i = 0; i < tam; i++)
+		{
+            if (Mar[coord[0] + i][coord[1]] != 0)
+			{
+                return 0;
+            }
+        }
+    }
+    return 1;
+}
+
 void Leer_Estadisticas()
 {
 	FILE *fp;
@@ -269,6 +295,9 @@ void Iniciar_Juego()
 			Mar_Disparos1[coord[0]][coord[1]] = 2;
 			aciertos++;
 			totdisp--;
+			if (Barco_Destruido(Mar2, coord, orientacion[0], barco[cant_dis1 % 5].tam)) {
+				printf("¡Has destruido completamente el barco %s!\n", barco[cant_dis1 % 5].nombre);
+			}
 		} else if (Mar_Disparos1[coord[0]][coord[1]] == 0) {
 			printf("¡Fallaste!\n");
 			Mar_Disparos1[coord[0]][coord[1]] = 1;
@@ -311,6 +340,9 @@ void Iniciar_Juego()
 			Mar_Disparos2[coord[0]][coord[1]] = 2;
 			aciertos++;
 			totdisp--;
+			if (Barco_Destruido(Mar1, coord, orientacion[0], barco[cant_dis2 % 5].tam)) {
+				printf("¡Has destruido completamente el barco %s!\n", barco[cant_dis2 % 5].nombre);
+			}
 		} else if (Mar_Disparos2[coord[0]][coord[1]] == 0) {
 			printf("¡Fallaste!\n");
 			Mar_Disparos2[coord[0]][coord[1]] = 1;
