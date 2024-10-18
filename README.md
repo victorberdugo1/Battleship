@@ -1,5 +1,9 @@
 # Battleship Game
 
+<p align="center">
+    <img src="Battleship.png" alt="preview" width="60%">
+</p>
+
 ## Introduction
 
 This project aims to develop an application that encapsulates basic concepts like:
